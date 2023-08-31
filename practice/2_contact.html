@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+
+    <link href="../resources/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="../resources/images/favicon.ico">
+    <link href="https://unpkg.com/ress/dist/ress.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="home" class="big-bg">
+        <header class="page-header wrapper">
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="1_hp.html">MAIN</a></li>
+                    <li><a href=#>WORK</a></li>
+                    <li><a href="2_contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <h1>
+                <a href="3_menu.html">
+                    <img class="logo" src="../resources/images/logo-ghost2.png" alt="HOME">
+                </a>
+            </h1>
+        </header>
+        <div class="wrapper">
+            <h1 id="contact-title">CONTACT</h1>
+            <div class="contact-all">
+                <ul class="contact-list">
+                    <li><span>EMAIL</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yang950454@gmail.com</li>
+                    <li><span>PHONE</span> &nbsp;&nbsp;&nbsp;&nbsp;010.3957.9596</li>
+                    <li><span>GIT</span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://github.com/asoong2
+                    </li>
+                    <li><span>KAKAO</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@asoong</li>
+                </ul>
+                <div class="contact-home">
+                    <a id="mp4" href="#">
+                        <div id="video-container">
+                            <video id="video-player" src="../resources/images/ghost2.mp4" autoplay loop muted
+                                onclick="handleVideoClick()"></video>
+                            <img id="image-replacement" src="../resources/images/놀람3.jpg" alt="못찾겠지?"
+                                style="display: none;">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <script>
+                var videoPlayer = document.getElementById("video-player");
+                var imageReplacement = document.getElementById("image-replacement");
+                var clickCount = 0;
+            
+                function handleVideoClick() {
+                    clickCount++;
+                    if (clickCount === 1) {
+                        setTimeout(function() {
+                            if (clickCount === 1) {
+                                alert("누르지 마!");
+                            }
+                            clickCount = 0;
+                        }, 300);
+                    }
+                }
+            
+                videoPlayer.addEventListener("dblclick", function(event) {
+                    event.preventDefault();
+                    alert("누르지 말라니까..!");
+                    videoPlayer.style.display = "none";
+                    imageReplacement.style.display = "block";
+                });
+            </script>
+        </body>
+        
+        </html>

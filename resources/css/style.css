@@ -1,0 +1,432 @@
+@charset "UTF-8";
+/* 인코딩 문자 깨짐 방지 */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+/* 별똥별 애니메이션 ------------------------------------------- */
+
+/* 반짝이*/
+
+.star {
+    overflow: hidden;
+}
+
+.star span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 3px;
+    background: #fff;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1),
+        0 0 0 5px rgba(255, 255, 255, 0.1),
+        0 0 20px rgba(255, 255, 255, 0.1);
+    animation: animate 3s linear infinite;
+
+}
+
+/* 꼬리 */
+span::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.4),
+            transparent);
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(315deg) translateX(-1000px);
+        opacity: 0;
+    }
+}
+
+span:nth-child(1) {
+    top: 0;
+    right: 0;
+    left: initial;
+    animation-delay: 0;
+    animation-duration: 1s;
+}
+
+span:nth-child(2) {
+    top: 0;
+    right: 80px;
+    left: initial;
+    animation-delay: 0.2s;
+    animation-duration: 3s;
+}
+
+span:nth-child(3) {
+    top: 80px;
+    right: 0px;
+    left: initial;
+    animation-delay: 0.4s;
+    animation-duration: 2s;
+}
+
+span:nth-child(4) {
+    top: 0px;
+    right: 180px;
+    left: initial;
+    animation-delay: 0.6s;
+    animation-duration: 1.5s;
+}
+
+span:nth-child(5) {
+    top: 0px;
+    right: 400px;
+    left: initial;
+    animation-delay: 0.8s;
+    animation-duration: 2.5s;
+}
+
+span:nth-child(6) {
+    top: 0px;
+    right: 600px;
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 3s;
+}
+
+span:nth-child(7) {
+    top: 300px;
+    right: 0px;
+    left: initial;
+    animation-delay: 1.2s;
+    animation-duration: 1.75s;
+}
+
+span:nth-child(8) {
+    top: 0px;
+    right: 700px;
+    left: initial;
+    animation-delay: 1.4s;
+    animation-duration: 1.25s;
+}
+
+span:nth-child(9) {
+    top: 0px;
+    right: 1000px;
+    left: initial;
+    animation-delay: 0.75s;
+    animation-duration: 2.25s;
+}
+
+span:nth-child(10) {
+    top: 0px;
+    right: 450px;
+    left: initial;
+    animation-delay: 2.75s;
+    animation-duration: 2.25s;
+}
+
+/* basic ------------------------------------------------ */
+
+html {
+
+    font-size: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 80vh;
+    color: #fff;
+    line-height: 2.0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* header ------------------------------------------------ */
+
+.page-header {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+/* nav 메뉴 */
+.main-nav {
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    list-style-type: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-right: -40px;
+}
+
+.main-nav li {
+    margin-left: 50px;
+}
+
+.main-nav a {
+    color: #fff;
+}
+
+.main-nav a:hover {
+    color: rgb(0, 255, 55);
+}
+
+.logo {
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+
+/* 콘텐츠의 최대 출력 너비 설정 */
+.wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* home ----------------------------------------- */
+.home-content {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    position: relative;
+}
+
+.big-star {
+    position: absolute;
+    top: -160px;
+    left: 0;
+    transform: scale(0.9);
+}
+
+#page-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 9rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-top: 0;
+    line-height: 130px;
+    margin-right: 20px;
+    white-space: nowrap;
+
+    position: absolute;
+    left: 9;
+    bottom: -730px;
+}
+
+.ghost {
+    position: relative;
+    max-height: 80vh;
+    /* margin-top: 100px; */
+    margin-left: 840px;
+
+    position: absolute;
+    left: 0;
+    bottom: -600px;
+    /* transform: scale(0.9); */
+}
+
+.home-content span {
+    color: rgb(0, 255, 55);
+}
+
+#home {
+    background-image: url("../images/noise.jpg");
+    min-height: 100vh;
+}
+
+.big-bg {
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+
+/* home2 ----------------------------------------- */
+
+#home2 {
+    background-image: url("../images/noise.jpg");
+}
+
+.overview {
+    margin-top: 100px;
+}
+.overview h1{
+    color: rgb(0, 255, 55);
+    margin-top: 100px;
+}
+
+.over-all {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.over-all a {
+    text-decoration: underline dashed;
+}
+
+.over-all a:hover{
+    color: rgb(0, 255, 55);
+}
+
+.over-all a.clicked {
+    color: rgb(0, 255, 55);
+}
+
+.green-box {
+    border-radius: 50px;
+}
+
+.overview p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.5rem;
+}
+
+#idea-video {
+    border-radius: 50px;
+}
+
+
+
+
+/* footer ------------------------------ */
+
+footer {
+    background-image: url("../images/noise.jpg");
+    align-items: flex-end;
+    align-items: end;
+    margin-top: 200px;
+}
+
+.footer-all {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.fcopy {
+    margin: 0;
+}
+
+/* contact page ------------------------- */
+
+.contact-all {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#contact-title{
+    color: rgb(0, 255, 55);
+    font-family: 'Outfit', sans-serif;
+    font-size: 4rem;
+}
+
+.contact-list {
+    font-size: 1.5rem;
+    list-style-type: none;
+    line-height: 100px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.contact-list span {
+    font-family: 'Outfit', sans-serif;
+    color: rgb(0, 255, 55);
+}
+
+.contact-home video {
+    border-radius: 50px;
+}
+
+.contact-home img {
+    border-radius: 50px;
+}
+
+
+/* menu page ----------------------*/
+#home3 {
+    background-image: url("../images/noise.jpg");
+    min-height: 100vh;
+}
+
+.big-bg2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.big-menu-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 5em;
+}
+
+.big-menu-list li {
+    margin-bottom: 20px;
+}
+
+.big-menu-list a {
+    color: #fff;
+}
+
+.big-menu-list a:hover{
+    color: rgb(0, 255, 55);
+}
+
+
+/* work page -----------------------------------*/
+#com {
+    transform: scale(1);
+}
+
+.website {
+    display: flex;
+    justify-content: left;
+    align-items : center;
+    margin-top: 200px;
+}
+
+#website-title {
+    font-size: 5em;
+    margin-left: 80px;
+}
+
+.website2 p {
+    margin : 100px 0px 300px 0px;
+    font-size: 1.2rem;
+
+}
+
+#home2 {
+    background-color: #fff;
+    min-height: 100vh;
+}
+

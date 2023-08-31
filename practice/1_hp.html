@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seulgi-hp</title>
+
+    <link href="../resources/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="../resources/images/favicon.ico">
+    <link href="https://unpkg.com/ress/dist/ress.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <section class="star">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </section>
+
+    <div id="home" class="big-bg">
+        <header class="page-header wrapper">
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="1_hp.html">MAIN</a></li>
+                    <li><a href="#">WORK</a></li>
+                    <li><a href="2_contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <h1>
+                <a href="3_menu.html">
+                    <img class="logo" src="../resources/images/logo-ghost2.png" alt="HOME">
+                </a>
+            </h1>
+        </header>
+        <!-- 메인 컨텐츠 -->
+        <div class="home-content wrapper">
+            <img class="big-star" src="../resources/images/big-star.png">
+            <h2 id="page-title">YAN<span class="color-g1">G</span><br />SEUL<span
+                    class="color-g2">G</span>I,<br />HOMEPA<span class="color-g3">G</span>-E</h2>
+            <img class="ghost" src="../resources/images/ghost3.png" alt="Ghost Image">
+        </div>
+    </div>
+    <div id="home2" class="big-bg">
+        <div class="overview wrapper">
+            <h1>overview</h1>
+            <div class="over-all">
+                <!-- 동영상을 위치시키는 div 추가 -->
+                <div class="video-container">
+                    <video id="idea-video" src="../resources/images/idea.mp4" loop muted hidden></video>
+                </div>
+                <img class="green-box" src="../resources/images/here.png" id="originalImage"
+                    onmouseover="changeImage()">
+                <p>
+                    <a id="video-player" onclick="playVideo()">상상을 현실로 만든다</a>, 제가 생각하는 코딩은 아이디어를 현실화하는 과정입니다.
+                    <br>오류를 겁내지 않고, 다양한 경험을 쌓는 과정을 즐기는 개발자가 되겠습니다.
+                    <br>티끌 모아 태산이라는 말처럼, 꾸준히 공부하고 나아가겠습니다.
+                    <br> 그 과정을 이 홈페이지에 담아 기록해나가고 싶습니다. 매일 쓰는 일기처럼
+                    <br>작은 코드 한 줄이라도 꾸준히 쌓아올리겠습니다.
+                </p>
+            </div>
+        </div>
+
+        <script>
+            function changeImage() {
+                var originalImage = document.getElementById("originalImage");
+                originalImage.src = "../resources/images/dap.png";
+            }
+
+            var isClicked = false;
+
+            function playVideo() {
+                var video = document.getElementById("idea-video");
+                var greenBox = document.querySelector(".green-box");
+
+                video.removeAttribute("hidden");
+                video.play();
+                greenBox.style.display = "none";
+
+                var link = document.getElementById("video-player");
+                link.classList.add("clicked");
+                isClicked = true;
+            }
+
+            var link = document.getElementById("video-player");
+
+            link.addEventListener("mouseover", function () {
+                if (!isClicked) {
+                    link.style.color = "rgb(0, 255, 55)";
+                }
+            });
+
+            link.addEventListener("mouseout", function () {
+                if (!isClicked) {
+                    link.style.color = "#fff";
+                }
+            });
+
+
+        </script>
+        <br>
+        <footer>
+            <div class="footer-all wrapper">
+                <p class="fcopy"><small>&copy; 2023 SEULGI. all rights reserved.</small></p>
+
+                <a href="https://github.com/asoong2">
+                    <img class="git-logo" src="../resources/images/git-logo2.png">
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
