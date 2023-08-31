@@ -153,9 +153,6 @@ a {
     text-decoration: none;
 }
 
-img {
-    max-width: 100%;
-}
 
 /* header ------------------------------------------------ */
 
@@ -269,7 +266,8 @@ img {
 .overview {
     margin-top: 100px;
 }
-.overview h1{
+
+.overview h1 {
     color: rgb(0, 255, 55);
     margin-top: 100px;
 }
@@ -285,7 +283,7 @@ img {
     text-decoration: underline dashed;
 }
 
-.over-all a:hover{
+.over-all a:hover {
     color: rgb(0, 255, 55);
 }
 
@@ -307,8 +305,6 @@ img {
 }
 
 
-
-
 /* footer ------------------------------ */
 
 footer {
@@ -323,9 +319,12 @@ footer {
     justify-content: space-between;
 }
 
-
 .fcopy {
-    margin: 0;
+    margin-top: 5px;
+}
+
+.git-logo {
+    margin-top: 7px;
 }
 
 /* contact page ------------------------- */
@@ -337,7 +336,7 @@ footer {
 
 }
 
-#contact-title{
+#contact-title {
     color: rgb(0, 255, 55);
     font-family: 'Outfit', sans-serif;
     font-size: 4rem;
@@ -397,7 +396,7 @@ footer {
     color: #fff;
 }
 
-.big-menu-list a:hover{
+.big-menu-list a:hover {
     color: rgb(0, 255, 55);
 }
 
@@ -410,23 +409,83 @@ footer {
 .website {
     display: flex;
     justify-content: left;
-    align-items : center;
-    margin-top: 200px;
+    align-items: center;
+    margin-top: 160px;
 }
 
 #website-title {
-    font-size: 5em;
+    font-size: 7em;
     margin-left: 80px;
 }
 
 .website2 p {
-    margin : 100px 0px 300px 0px;
-    font-size: 1.2rem;
-
+    margin: 60px 0px 300px 0px;
+    font-size: 1.4rem;
 }
 
-#home2 {
-    background-color: #fff;
-    min-height: 100vh;
+.button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family: outfit;
+    margin: 50px 480px 0px 170px;
+    cursor: pointer;
 }
 
+/*work page 하단 ---------------------------------*/
+
+.work-wrapper {
+    overflow: hidden;
+}
+
+#work-home {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#work-content {
+    display: flex;
+    flex-direction: column;
+    margin-right: -110px;
+}
+
+.imac {
+    margin-right: 200px;
+}
+
+#date {
+    color: gray;
+    font-family: outfit;
+    margin-left: 430px;
+    font-size: 1.4rem;
+}
+
+#imac-text {
+    font-family:;
+    color: black;
+    margin-top: 80px;
+    margin-left: 170px;
+}
+
+#divider {
+    border-bottom: 2px solid grey;
+    width: 400px;
+    margin: 10px 220px 0;
+}
+
+.work-bottom h1 {
+    color: black;
+    font-size: 4.8rem;
+    margin-left: 165px;
+    font-family: outfit;
+}
+
+.view {
+    color: black;
+}
